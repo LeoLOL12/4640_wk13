@@ -1,0 +1,16 @@
+---
+version: '3'
+
+services:
+  app:
+    image: app:latest
+    env_file:
+      - variables.env
+    ports:
+      - 12345:5000
+  web:
+    image: web:latest
+    env_file:
+      - variables.env
+    ports:
+      - 8000:80
